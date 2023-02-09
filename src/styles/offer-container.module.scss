@@ -1,0 +1,29 @@
+@use "../styles/variables.scss" as variable;
+
+.section {
+  background-color: variable.$background-gray;
+  color: black;
+  padding: 2rem 0;
+  overflow-x: hidden;
+}
+.container {
+  background-color: variable.$main-light;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto;
+  padding: 3rem;
+  width: 90%;
+  box-sizing: border-box;
+}
+
+.h2 {
+  font-size: 2rem;
+  border-bottom: 1px solid black;
+}
+
+@media (min-width: 1300px) {
+  .container {
+    width: 50%;
+  }
+}

@@ -1,0 +1,13 @@
+@use "../../../styles/variables.scss" as variable;
+
+.btn {
+  border: none;
+  padding: 0.5rem 2rem;
+  background-color: variable.$dark-blue;
+  color: variable.$main-light;
+  cursor: pointer;
+}
+
+.loading {
+  background-color: rgb(135, 135, 135);
+}

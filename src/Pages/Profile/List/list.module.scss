@@ -1,0 +1,63 @@
+@use "../../../styles/variables.scss" as variable;
+
+.section {
+  margin: 2rem auto;
+}
+
+.content {
+  width: 100%;
+  min-height: 45vh;
+  display: flex;
+  flex-direction: column;
+  word-break: break-all;
+}
+
+.profile_list {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  gap: 10px;
+  width: 100%;
+  margin: 2rem auto 0 auto;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.link {
+  display: inline-block;
+  width: 6.5rem;
+  height: 2rem;
+  line-height: 2rem;
+  background-color: variable.$light-blue;
+  color: variable.$main-light;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  padding: 0.2rem;
+  transition: 0.1s;
+  &:hover {
+    background-color: variable.$dark-blue;
+  }
+}
+.is_active {
+  background-color: variable.$dark-blue;
+}
+
+@media (min-width: 860px) {
+  .profile_list {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .link {
+    height: auto;
+  }
+}
+
+@media (min-width: 550px) {
+  .section {
+    width: 100%;
+    padding: 0;
+  }
+  .content {
+    min-height: 30vh;
+  }
+}

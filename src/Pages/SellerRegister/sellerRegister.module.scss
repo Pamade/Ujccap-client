@@ -1,0 +1,71 @@
+@use "../../styles/variables.scss" as variable;
+.container {
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+}
+.form {
+  margin-top: 2rem;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.heading {
+  margin-top: 50px;
+  display: flex;
+  width: 100%;
+}
+.heading:after,
+.heading:before {
+  width: 100%;
+  content: "";
+  flex: 1;
+  border-bottom: groove 2px;
+  margin: auto 0.25em;
+  box-shadow: 0 -1px; /* ou 0 1px si border-style:ridge */
+}
+
+.img {
+  width: 10rem;
+}
+
+.btn {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  padding: 0.3rem 0;
+  background-color: variable.$light-blue;
+  border-radius: 0.25rem;
+  border: 1px solid variable.$dark-blue;
+  color: #fff;
+  font-size: 18px;
+  line-height: 30px;
+  width: 100%;
+  text-align: center;
+  &:hover {
+    background-color: variable.$dark-blue;
+    border-color: variable.$dark-blue;
+  }
+}
+
+@media (min-width: 860px) {
+  .form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.validation_wrapper {
+  width: 100%;
+}
+
+@media (min-width: 1500px) {
+  .container {
+    width: 50%;
+  }
+}

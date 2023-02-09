@@ -1,0 +1,18 @@
+@use "./variables.scss" as variable;
+
+.message_box {
+  padding: 1rem;
+  color: variable.$main-light;
+  border-radius: 5px;
+  margin: 1rem 0;
+  & p {
+    font-size: 0.9rem;
+  }
+}
+
+.error {
+  background-color: rgba(246, 1, 1, 0.6);
+}
+.success {
+  background-color: rgba(19, 189, 81, 0.6);
+}

@@ -1,0 +1,47 @@
+@use "../../../styles/mixins.scss" as mixin;
+@use "../../../styles/variables.scss" as variable;
+
+.profile_link {
+  margin: 0.5rem 0;
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+}
+
+.profile_wrapper {
+  position: absolute;
+  width: 280px;
+  background-color: variable.$main-light;
+  border: 1px solid black;
+  border-radius: 5px;
+  left: 0%;
+  bottom: 100;
+  top: 94%;
+  z-index: 1000;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 1rem;
+  transition: 50px 1.5s;
+  height: auto;
+  overflow: hidden;
+  animation: scroll 1s;
+}
+
+@media (min-width: 860px) {
+  .profile_wrapper {
+    left: 45%;
+  }
+}
+
+.name {
+  font-weight: bold;
+}
+
+.btn {
+  @include mixin.blue_button;
+}

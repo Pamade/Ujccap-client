@@ -1,0 +1,37 @@
+$green: rgba(63, 249, 113, 0.876);
+$red: #ef5454;
+.opinions_action {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+  margin: 1rem 0;
+}
+.can_hover {
+  cursor: pointer;
+}
+.opinions {
+  display: flex;
+  margin-bottom: 1rem;
+  min-width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  flex-grow: 1;
+  text-align: center;
+  color: rgb(36, 36, 36);
+}
+.opinion {
+  width: 100%;
+}
+.positive {
+  background-color: $green;
+  &:hover {
+    background-color: darken($green, 15);
+  }
+}
+.negative {
+  background-color: $red;
+  &:hover {
+    background-color: darken($red, 15);
+  }
+}

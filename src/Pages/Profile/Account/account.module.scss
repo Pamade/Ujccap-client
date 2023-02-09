@@ -1,0 +1,41 @@
+@use "../../../styles/variables.scss" as variable;
+
+.link_wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 10px;
+  margin: 1rem 0;
+}
+
+.link {
+  display: block;
+  padding: 0 0.5rem;
+  height: 3rem;
+  line-height: 3rem;
+  width: 100%;
+  border: 1px solid black;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 0.7rem;
+  box-sizing: border-box;
+  transition: 0.3s;
+  &:hover {
+    background-color: rgb(68, 139, 232);
+    color: variable.$main-light;
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 320px) {
+  .link {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 550px) {
+  .link {
+    width: 45%;
+  }
+}

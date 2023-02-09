@@ -1,0 +1,23 @@
+@use "./variables.scss" as variable;
+
+@mixin blue_button {
+  padding: 1rem;
+  color: variable.$main-light;
+  background-color: variable.$light-blue;
+  transition: 0.3s;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  &:hover {
+    background-color: variable.$dark-blue;
+  }
+}
+
+@mixin text_input {
+  margin-top: 3rem;
+  width: calc(100% - 20px);
+  border-radius: 10px;
+  padding: 10px 10px;
+  border: 1px solid black;
+  outline: none;
+}

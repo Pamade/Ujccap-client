@@ -1,0 +1,73 @@
+@use "../../../styles/variables.scss" as variable;
+
+@media (max-width: 320px) {
+  .icon {
+    width: 40px;
+  }
+}
+
+.wrapper {
+  padding: 1rem 0;
+  width: 90%;
+  margin: 0 auto;
+}
+.heading {
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+.categories_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.single_category_wrapper {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  width: 45%;
+  margin: 1rem 0;
+  border-radius: 10px;
+  background-color: lighten(variable.$light-blue, 10);
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    background-color: variable.$light-blue;
+  }
+}
+.icon {
+  width: 80px;
+}
+
+.name {
+  font-size: 1.2rem;
+  color: variable.$main-light;
+}
+
+@media (min-width: 760px) {
+  .categories_wrapper {
+    &::after {
+      content: "";
+      width: 30%;
+    }
+  }
+  .single_category_wrapper {
+    width: 30%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .categories_wrapper {
+    &::after {
+      width: 18%;
+    }
+  }
+  .single_category_wrapper {
+    width: 18%;
+  }
+}

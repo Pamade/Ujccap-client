@@ -1,0 +1,17 @@
+@use "../../styles/variables.scss" as variable;
+.main {
+  background-color: variable.$background-gray;
+  margin: 2rem 0;
+  width: 100%;
+}
+
+.content {
+  width: 90%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.render_offers {
+  display: flex;
+  flex-wrap: wrap;
+}

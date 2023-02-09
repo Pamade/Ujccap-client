@@ -1,0 +1,26 @@
+@use "../../../styles/variables.scss" as variable;
+
+.label_wrapper {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+  gap: 15px;
+}
+
+.circle {
+  width: 60px;
+  height: 60px;
+  background-color: variable.$main-light;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid variable.$gray;
+}
+.number {
+  font-size: 1.5rem;
+}
+
+.h5 {
+  font-size: 1.4rem;
+}

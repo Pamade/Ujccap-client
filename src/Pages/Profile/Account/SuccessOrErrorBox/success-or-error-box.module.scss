@@ -1,0 +1,23 @@
+@use "../../../../styles/variables.scss" as variable;
+
+.box {
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin: 1rem 0;
+}
+.error {
+  border: 1px solid rgb(237, 175, 175);
+  background-color: rgb(157, 28, 28);
+}
+
+.success {
+  border: 1px solid rgb(6, 113, 117);
+  background-color: rgb(14, 100, 23);
+}
+
+.text {
+  font-size: 1.1rem;
+  color: variable.$main-light;
+}

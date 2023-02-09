@@ -1,0 +1,13 @@
+.wrapper {
+  padding: 2rem;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  width: 100%;
+}
+
+@media (min-width: 860px) {
+  .wrapper {
+    margin-top: 2rem;
+    padding: 0;
+  }
+}

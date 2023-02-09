@@ -1,0 +1,87 @@
+@use "../../styles/variables.scss" as variable;
+
+@keyframes showUp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    background-color: rgba(220, 220, 220, 1);
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(220, 220, 220, 0.1);
+  border-radius: 10px;
+  padding: 1rem;
+  box-sizing: border-box;
+  z-index: 1000;
+  width: 80vw;
+  height: 50vh;
+  animation: showUp 3s;
+  animation-fill-mode: forwards;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.content {
+  height: 100%;
+  gap: 10px;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+.h3 {
+  font-size: 1.7rem;
+}
+.btn {
+  background-color: black;
+  color: variable.$main-light;
+  border: none;
+  padding: 7.5px 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    background-color: variable.$main-light;
+    color: black;
+  }
+  &:first-of-type {
+    background-color: variable.$main-light;
+    color: black;
+    font-weight: bold;
+    &:hover {
+      color: variable.$main-light;
+      background-color: black;
+    }
+  }
+}
+@media (min-height: 375px) and (orientation: landscape) {
+  .modal {
+    height: 70vh;
+  }
+}
+
+@media (min-width: 760px) and (orientation: portrait) {
+  .modal {
+    height: 30vh;
+  }
+}
+@media (min-width: 1000px) {
+  .modal {
+    width: 60vw;
+    height: 30vh;
+  }
+}

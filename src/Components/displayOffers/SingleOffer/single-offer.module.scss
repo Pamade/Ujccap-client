@@ -1,0 +1,53 @@
+@use "../../../styles/variables.scss" as variable;
+@use "../offers-and-buttons-display.module.scss" as mixin;
+
+.single_only_offer_wrapper {
+  text-align: left;
+  word-break: break-all;
+  @include mixin.commonSpaceAdditionalAndSingleOffer;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+}
+
+.info_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.img {
+  width: 100px;
+  height: 74px;
+  border-radius: 5px;
+}
+
+.icon_text {
+  font-size: 1rem;
+}
+
+.h4 {
+  font-size: 1.2rem;
+}
+
+.single_offer_wrapper_profile,
+.single_offer_wrapper {
+  width: 100%;
+}
+
+@media (min-width: 500px) {
+  .single_offer_wrapper {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .single_offer_wrapper {
+    width: 33.333%;
+  }
+}

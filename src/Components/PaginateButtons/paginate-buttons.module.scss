@@ -1,0 +1,26 @@
+@use "../../styles/variables.scss" as variable;
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1px;
+  margin: 1rem 0;
+}
+
+.btn {
+  background-color: variable.$light-blue;
+  color: variable.$main-light;
+  cursor: pointer;
+  min-width: 35px;
+  height: 30px;
+  &:hover {
+    background-color: lighten(variable.$light-blue, 10);
+  }
+}
+
+.active {
+  background-color: darken(variable.$dark-blue, 10);
+  &:hover {
+    background-color: darken(variable.$dark-blue, 10);
+  }
+}

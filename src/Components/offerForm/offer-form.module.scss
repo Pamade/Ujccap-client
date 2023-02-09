@@ -1,0 +1,31 @@
+@use "../../styles/variables.scss" as variable;
+$lightblue: #2b6cb0;
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  background-color: #4299e1;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 16px;
+  border-bottom: 4px solid $lightblue;
+  font-weight: 700;
+  color: white;
+  line-height: 26px;
+  transition: 0.2s;
+  &:hover {
+    background-color: $lightblue;
+  }
+}
+
+.select {
+  margin: 1rem 0;
+  font-size: 1rem;
+  cursor: pointer;
+}

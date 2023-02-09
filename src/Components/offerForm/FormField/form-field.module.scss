@@ -1,0 +1,73 @@
+@use "../../../styles/variables.scss" as variable;
+.label {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+.input,
+.textarea {
+  box-sizing: border-box;
+  box-shadow: inset #abacaf 0 0 0 2px;
+  border: 0;
+  background: rgba(0, 0, 0, 0);
+  width: 100%;
+  position: relative;
+  border-radius: 3px;
+  padding: 9px 12px;
+  line-height: 1.4;
+  color: black;
+  font-size: 16px;
+  font-weight: 400;
+  height: 40px;
+  transition: all 0.2s ease;
+  &:hover {
+    box-shadow: 0 0 0 0 variable.$main-light inset,
+      variable.$dark-blue 0 0 0 2px;
+  }
+  &:focus {
+    background: variable.$main-light;
+    outline: 0;
+    box-shadow: 0 0 0 0 variable.$main-light inset,
+      variable.$dark-blue 0 0 0 3px;
+  }
+}
+.input.medium,
+.input.big {
+  width: 100%;
+}
+.input.big {
+  margin: 10px 0;
+}
+.error {
+  color: red;
+}
+
+.textarea {
+  margin: 0.5rem 0;
+  height: 5rem;
+}
+
+.input_error {
+  box-shadow: none;
+  border: 1px solid rgb(213, 24, 24);
+  &:hover {
+    box-shadow: none;
+  }
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+@media (min-width: 860px) {
+  .form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .medium {
+    width: 47%;
+  }
+  .big {
+    width: 100%;
+  }
+}

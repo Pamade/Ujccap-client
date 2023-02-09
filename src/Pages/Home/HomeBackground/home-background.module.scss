@@ -1,0 +1,68 @@
+@use "../../../styles/variables.scss" as variable;
+@use "../../../styles/mixins.scss" as mixin;
+.background {
+  width: 100vw;
+  min-height: 60vh;
+  background-position: center;
+  background-size: cover;
+}
+
+.content {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.text_content {
+  width: 80%;
+  margin: 0 auto;
+  padding: 1rem 0;
+  color: variable.$main-light;
+  text-align: center;
+}
+.h3 {
+  margin-top: 2rem;
+  font-weight: normal;
+}
+
+.input {
+  @include mixin.text_input;
+}
+
+.btn {
+  margin: 1rem 0;
+  padding: 0.6rem 1.5rem;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  transition: 0.3s;
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: variable.$main-light;
+  }
+}
+
+@media (min-width: 600px) {
+  .category {
+    font-size: 1rem;
+  }
+  .h1 {
+    font-size: 2rem;
+  }
+  .h3 {
+    font-size: 1.8rem;
+  }
+  .input {
+    height: 50px;
+    font-size: 1.2rem;
+  }
+  .btn {
+    padding: 1rem 3rem;
+    margin-top: 2rem;
+    font-size: 1rem;
+  }
+  .text_content {
+    padding-top: 3rem;
+    width: 50%;
+  }
+}

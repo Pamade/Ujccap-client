@@ -1,0 +1,59 @@
+@use "../../../styles/variables.scss" as variable;
+
+@keyframes scrollLeft {
+  from {
+    transform: translateX(-100vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes filter {
+  from {
+    filter: grayscale(100%);
+  }
+  to {
+    filter: none;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow: hidden;
+}
+
+.other {
+  width: 16.5%;
+  height: 80px;
+  filter: grayscale(100%);
+  cursor: pointer;
+}
+
+.images_below_wrapper {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.active {
+  animation: filter 1s forwards;
+}
+
+.main {
+  width: auto;
+  max-height: 400px;
+  object-fit: contain;
+  animation: scrollLeft 0.3s forwards;
+}
+
+@media (min-width: 900px) {
+  .wrapper {
+    width: 45%;
+  }
+  .main {
+    width: auto;
+    height: 400px;
+  }
+}

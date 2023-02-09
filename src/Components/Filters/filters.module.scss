@@ -1,0 +1,107 @@
+@use "../../styles/variables.scss" as variable;
+
+$border-color-focus: #326077;
+
+.wrapper {
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.price_wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  display: block;
+  margin: 1.5rem 0 0.5rem 0;
+}
+
+.inputs_price {
+  display: flex;
+  justify-content: space-between;
+  & input {
+    font-size: 16px;
+    color: #002f34;
+    border: none;
+    border-bottom: variable.$gray solid 2px;
+    border-radius: 4px;
+    line-height: 20px;
+    outline: 0;
+    width: 45%;
+    box-sizing: border-box;
+    padding: 14px 32px 14px 10px;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      border-color: $border-color-focus;
+    }
+  }
+}
+
+.select,
+.input_text {
+  border-radius: 5px;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: normal;
+  cursor: pointer;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 auto;
+  border: solid 2px variable.$gray;
+  outline: none;
+  &:focus {
+    border-color: $border-color-focus;
+  }
+}
+
+.checkbox_wrapper {
+  margin: 1rem 0;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  & p {
+    margin: 0.5rem 0;
+  }
+  & input[type="checkbox"] {
+    cursor: pointer;
+    width: 22px;
+    height: 22px;
+  }
+}
+
+.h3 {
+  margin: 1rem 0;
+  font-size: 1.4rem;
+}
+
+.sort_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+@media (min-width: 860px) {
+  .sort_wrapper {
+    flex-direction: row;
+    width: 100%;
+  }
+  .name_location_wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    & div {
+      width: 45%;
+    }
+  }
+  .select_sort {
+    width: 30%;
+  }
+}

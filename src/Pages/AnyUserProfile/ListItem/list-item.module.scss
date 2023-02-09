@@ -1,0 +1,19 @@
+@use "../../../styles/variables.scss" as variable;
+
+$padding: 0.5rem;
+
+.label {
+  padding-bottom: $padding;
+}
+.value {
+  font-weight: bold;
+  font-size: 0.95rem;
+  padding-bottom: $padding;
+}
+.li {
+  border-bottom: 1px solid variable.$gray;
+  text-align: left;
+  &:last-of-type {
+    border: none;
+  }
+}

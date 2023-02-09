@@ -1,0 +1,8 @@
+.alert_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  & p::first-letter {
+    text-transform: uppercase;
+  }
+}

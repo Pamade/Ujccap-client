@@ -1,0 +1,20 @@
+.li {
+  display: flex;
+  padding: 1rem;
+  flex-direction: column;
+  cursor: pointer;
+  word-break: break-all;
+  background-color: rgb(255, 255, 255);
+  &:hover {
+    background-color: #f6f7ff;
+  }
+}
+.label {
+  font-size: 0.8rem;
+  margin: 0.1rem 0;
+}
+.img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}

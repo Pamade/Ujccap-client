@@ -1,0 +1,26 @@
+$red: rgb(218, 3, 3);
+.input {
+  display: none;
+}
+
+.img {
+  cursor: pointer;
+  border-radius: 7px;
+}
+
+.container {
+  position: relative;
+}
+
+.delete_icon {
+  position: absolute;
+  top: 9px;
+  right: -5px;
+  cursor: pointer;
+  color: $red;
+  z-index: 333;
+  font-size: 40px;
+  &:hover {
+    color: darken($red, 5);
+  }
+}

@@ -1,0 +1,56 @@
+@use "../../styles/variables.scss" as variable;
+
+.wrapper {
+  margin-top: 1rem;
+}
+
+.info_wrapper {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+}
+.heading {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.box {
+  padding: 1rem 0;
+  border-bottom: 1px solid variable.$gray;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  &:last-of-type {
+    border: none;
+  }
+}
+
+.avatar_name_wrapper {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.name {
+  font-weight: bold;
+}
+
+.avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+@media (min-width: 900px) {
+  .info_wrapper {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .box {
+    border: none;
+    width: 30%;
+  }
+  .heading {
+    border-bottom: 1px solid variable.$gray;
+  }
+}

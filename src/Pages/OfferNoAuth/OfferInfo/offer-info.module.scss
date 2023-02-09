@@ -1,0 +1,51 @@
+@use "../../../styles/variables.scss" as variable;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.name {
+  font-size: 1.8rem;
+}
+
+.time_left_wrapper {
+  padding: 0.5rem 0;
+  margin: 0.5rem 0;
+  border-bottom: 1px solid variable.$gray;
+  border-top: 1px solid variable.$gray;
+  align-items: center;
+  gap: 0.2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.label {
+  font-weight: bold;
+}
+.time {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.icon {
+  font-size: 1.5rem;
+}
+
+.info_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.box_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+@media (min-width: 900px) {
+  .wrapper {
+    width: 45%;
+  }
+}

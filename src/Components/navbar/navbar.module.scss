@@ -1,0 +1,99 @@
+@use "../../styles/variables.scss" as variable;
+@use "../../styles/mixins.scss" as mixin;
+$mobile-width: 95%;
+
+.navbar {
+  width: $mobile-width;
+  margin: 0 auto;
+  background-color: variable.$main-light;
+  color: variable.$secondary-color;
+}
+.navbar_content_desktop {
+  display: none;
+}
+.navbar_content_mobile {
+  width: $mobile-width;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: calc(variable.$nav-height - 1px);
+}
+
+.goHome {
+  width: 33.33%;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.login {
+  font-size: 0.9rem;
+  &:first-of-type {
+    margin-right: 0.1rem;
+  }
+  &_content {
+    text-align: right;
+    width: 33.33%;
+  }
+}
+.loop {
+  &_container {
+    display: flex;
+    width: 33.33%;
+    align-self: center;
+  }
+  font-size: 2rem;
+}
+
+.avatar_logout_container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  align-items: center;
+}
+.img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: -15px;
+  cursor: pointer;
+}
+
+.box_container {
+  position: relative;
+}
+.allowed {
+  font-size: 0.8rem;
+}
+
+.mobile_container {
+  padding: 1rem 0;
+}
+
+@media (min-width: 860px) {
+  .img {
+    width: 60px;
+    height: 60px;
+  }
+  .navbar_content_mobile {
+    display: none;
+  }
+  .navbar_content_desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: calc(variable.$nav-height - 1px);
+    margin: 0 auto;
+  }
+  .goHome {
+    text-align: left;
+  }
+  .login {
+    font-size: 1rem;
+    display: inline;
+  }
+
+  .login:first-child {
+    margin-right: 0.5rem;
+  }
+}

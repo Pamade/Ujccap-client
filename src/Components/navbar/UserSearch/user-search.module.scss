@@ -1,0 +1,26 @@
+@use "../../../styles/mixins.scss" as mixin;
+@use "../../../styles/variables.scss" as variable;
+
+.input {
+  @include mixin.text_input;
+  width: 100%;
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 0;
+}
+
+.results_box {
+  position: absolute;
+  width: 90%;
+  left: 5%;
+  margin: 0 auto;
+  border: 1px solid variable.$gray;
+  border-top: none;
+}
+
+@media (min-width: 860px) {
+  .container {
+    position: relative;
+    width: 20%;
+  }
+}

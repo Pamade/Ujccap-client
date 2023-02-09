@@ -1,0 +1,21 @@
+@use "../../../styles/variables.scss" as variable;
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: variable.$main-light;
+}
+.btn {
+  background-color: rgb(31, 132, 166);
+  display: flex;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 10px 15px;
+  transition: 0.2s;
+  &:hover {
+    background-color: rgb(16, 62, 213);
+  }
+  &_selected {
+    background-color: rgb(16, 62, 213);
+  }
+}

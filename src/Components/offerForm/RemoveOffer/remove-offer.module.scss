@@ -1,0 +1,53 @@
+$red: rgb(242, 58, 58);
+$green: rgb(7, 113, 7);
+.btn {
+  width: 100%;
+  margin-top: 2rem;
+  color: white;
+  outline: none;
+  padding: 0.8rem 0;
+  border-color: $red;
+  background-color: $red;
+  cursor: pointer;
+  transition: 1s;
+  text-align: center;
+  &:hover {
+    background-color: darken($red, 20);
+  }
+}
+
+.h2 {
+  margin: 0.5rem 0;
+  font-weight: normal;
+}
+
+.buttons_wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.decision_button {
+  margin: 1rem 0;
+  padding: 0.5rem 0;
+  width: 45%;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.btn_cancel {
+  background-color: $green;
+  &:hover {
+    background-color: lighten($green, 10);
+  }
+}
+.btn_confirm {
+  background-color: $red;
+  &:hover {
+    background-color: darken($red, 10);
+  }
+}

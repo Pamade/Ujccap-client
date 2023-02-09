@@ -1,0 +1,18 @@
+@use "../../styles/variables.scss" as variable;
+
+.heart {
+  color: variable.$gray;
+  line-height: 2rem;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    color: rgb(10, 113, 10);
+  }
+  &_favourite {
+    color: rgb(10, 113, 10);
+    &:hover {
+      color: red;
+    }
+  }
+}

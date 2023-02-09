@@ -1,0 +1,82 @@
+@use "./variables.scss" as variable;
+
+$dark: #1f2029;
+
+.section {
+  display: flex;
+  justify-content: center;
+  background-color: $dark;
+  min-height: calc(100vh - variable.$nav-height);
+  width: 100%;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: variable.$main-light;
+  border-radius: 5px;
+  padding: 2rem;
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+}
+.form {
+  margin: 0.5rem 0;
+}
+
+.p {
+  margin: 1rem 0;
+}
+
+.input {
+  display: block;
+  width: calc(100% - 2rem);
+  padding: 1rem;
+  margin: 0.2rem 0;
+  color: variable.$main-light;
+  background-color: #4e4e52;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  transition: all 200ms linear;
+  box-shadow: 0 4px 8px 0 rgba(21, 21, 21, 0.2);
+}
+.btn {
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  border: none;
+  padding: 0 46px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 7px;
+  background-color: #0070f3;
+  color: variable.$main-light;
+  font-size: 16px;
+  box-shadow: 0 4px 14px 0 rgb(0 118 255 / 39%);
+  &:hover {
+    background: rgba(0, 118, 255, 0.9);
+    box-shadow: 0 6px 20px rgb(0 118 255 / 23%);
+  }
+}
+.additional {
+  width: 100%;
+  margin-top: 0.4rem;
+  text-decoration: underline;
+}
+
+.resend {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media (min-width: 860px) {
+  .content {
+    width: 50%;
+  }
+  .h3 {
+    font-size: 1.5rem;
+  }
+}

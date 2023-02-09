@@ -1,0 +1,12 @@
+@use "../../../styles/variables.scss" as variable;
+
+.all_offers_btn {
+  padding: 1rem;
+  border: 1px solid variable.$gray;
+  border-radius: 5px;
+  transition: 0.3s;
+  &:hover {
+    background-color: darken(variable.$gray, 40);
+    color: variable.$main-light;
+  }
+}

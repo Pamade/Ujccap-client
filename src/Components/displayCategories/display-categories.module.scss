@@ -1,0 +1,11 @@
+.categories {
+  display: flex;
+  gap: 0.8rem;
+}
+.category {
+  z-index: 999;
+  &::first-letter {
+    text-transform: uppercase;
+  }
+  font-size: 0.75rem;
+}
