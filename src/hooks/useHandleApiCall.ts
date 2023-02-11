@@ -30,6 +30,7 @@ export const useHandleApiCall = (type:RequestTypes, authNeeded = false, userUpda
     
       const handleApiCall =(async(url:string, data = {}, config = {}, cb:(data:Data, error:Error, user?:User)  => void) => {
         setLoading(true)
+        
         try {
             const  response = await axiosInstanceCreate({
                 method:type,
@@ -37,6 +38,7 @@ export const useHandleApiCall = (type:RequestTypes, authNeeded = false, userUpda
                 data,
                 ...config
             })
+            console.log(response)
             if (response.data) {
                 cb(response.data.data, "", response.data.user)
             }
@@ -51,6 +53,7 @@ export const useHandleApiCall = (type:RequestTypes, authNeeded = false, userUpda
         }
             catch (err:any) {
                 console.log(err)
+                console.log(err.response)
                 cb(null, err.response.data.err)
                 setLoading(false)
             }

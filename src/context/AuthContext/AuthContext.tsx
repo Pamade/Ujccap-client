@@ -40,6 +40,7 @@ export const AuthContextProvider = ({ children }: AuthContextProvider) => {
     dispatch({ type: "LOADING_START" });
     const modal = localStorage.getItem("showModal");
     await handleApiCall("/auth/getUser", {}, {}, (data, err: Error) => {
+      console.log(data);
       const isUser = CheckType<User>(data);
 
       if (isUser) {
