@@ -41,7 +41,7 @@ const OfferInfo = ({ info, userId }: Props) => {
     : "";
   const timeLeft =
     duration.minutes() >= 0 ? daysLeft + hoursLeft + minutesLeft : "Expired";
-  console.log(info);
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.name_wrapper}>

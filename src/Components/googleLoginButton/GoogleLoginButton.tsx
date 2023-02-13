@@ -19,7 +19,6 @@ const GoogleLoginButton = ({ setError }: Props) => {
         { email, avatar },
         {},
         (data, error) => {
-          console.log(data);
           const isData = CheckType<LoginData>(data);
           if (isData) {
             const { token, user } = data;

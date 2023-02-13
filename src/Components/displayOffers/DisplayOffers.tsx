@@ -86,7 +86,7 @@ const DisplayOffers = ({
     const paramValue = param && params[param] ? params[param] : "";
 
     const api = `${apiCall}${paramValue}${buildQueryString(state)}`;
-    console.log(api);
+
     handleApiCall(api, {}, {}, (data, err) => {
       const isOffer = CheckType<OffersWithCount>(data);
 

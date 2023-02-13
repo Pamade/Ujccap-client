@@ -84,7 +84,6 @@ const OfferForm = ({ data, sendData, updating }: Props) => {
       }
     }
   }, [data]);
-  console.log(offerInformations);
 
   const handleChangeInformations = (
     e: React.ChangeEvent<

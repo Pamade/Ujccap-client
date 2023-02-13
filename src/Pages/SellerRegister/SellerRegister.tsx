@@ -50,8 +50,7 @@ const SellerRegister = () => {
       if (typeof err === "object") {
         return setValidationError(err);
       }
-      console.log(data, " data");
-      console.log(user, "user");
+
       if (user && typeof data === "string") {
         dispatch({ type: "LOGIN_SUCCESS", payload: user });
         toast.success(data);

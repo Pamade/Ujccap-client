@@ -12,7 +12,6 @@ const UserSearch = () => {
   const [usersSearched, setUsersSearched] = useState<User[]>([]);
   const handleSearchUser = () => {
     handleApiCall(`/anyUser/search/${search}`, {}, {}, (data, err) => {
-      console.log(data);
       const areUsers = CheckType<User[]>(data);
       if (areUsers && data.length !== 0) {
         setUsersSearched(data);

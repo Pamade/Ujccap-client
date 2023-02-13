@@ -38,7 +38,7 @@ export const useHandleApiCall = (type:RequestTypes, authNeeded = false, userUpda
                 data,
                 ...config
             })
-            console.log(response)
+            
             if (response.data) {
                 cb(response.data.data, "", response.data.user)
             }
@@ -52,9 +52,8 @@ export const useHandleApiCall = (type:RequestTypes, authNeeded = false, userUpda
             setLoading(false)
         }
             catch (err:any) {
-                console.log(err)
-                console.log(err.response)
-                cb(null, err.response.data.err)
+                console.log(err.response.data.err)
+                cb(null,err.response.data.err)
                 setLoading(false)
             }
       })

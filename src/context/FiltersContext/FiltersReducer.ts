@@ -19,7 +19,7 @@ export const FiltersReducer = (state: State, action: Actions) => {
       case "SWITCH_SHOW_EXPIRED":
         return { ...state, showExpired: !state.showExpired, page: 1 };
       case "UPDATE_SORT":
-        console.log(action.payload, action.type)
+        
         if (typeof sort !== "string" && sort) {  
           currentItem = sort.find(
             (item) => item.type === action.typeSort

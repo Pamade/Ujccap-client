@@ -5,7 +5,6 @@ interface Props {
 }
 
 const ValidationError = ({ error }: Props) => {
-  console.log(error);
   return (
     <>
       {error ? (
