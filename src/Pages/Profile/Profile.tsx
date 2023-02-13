@@ -67,7 +67,6 @@ const Profile = () => {
               Put up an Auciton
             </Link>
           )}
-
           <List />
         </div>
       </div>
