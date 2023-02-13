@@ -18,12 +18,13 @@ const DisplayOpinions = ({ user }: { user: User }) => {
   const isLoggedUser = loggedUser?._id === user._id;
 
   const handleSetOpinion = (type: "positive" | "negative") => {
-    if (!isLoggedUser) {
+    if (!isLoggedUser && loggedUser) {
       handleApiCall(
-        `/opinions/set/${user?._id}/${type}`,
+        `/opinions/set/${user._id}/${type}`,
         {},
         {},
         (data, err) => {
+          console.log(err);
           if (err && typeof err === "string") {
             toast.error(err);
           } else {
@@ -33,7 +34,7 @@ const DisplayOpinions = ({ user }: { user: User }) => {
           }
         }
       );
-    }
+    } else toast.error("You have to be logged");
   };
 
   return (
