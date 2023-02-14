@@ -48,7 +48,7 @@ const Filters = ({ showExpired, param }: PropsFilters) => {
   const [searchParams, setSearchParams] = useSearchParams();
   useEffect(() => {
     const stringFilters: { [key: string]: string } = {};
-
+    console.log(state);
     let filter: keyof State;
     for (filter in state) {
       if (

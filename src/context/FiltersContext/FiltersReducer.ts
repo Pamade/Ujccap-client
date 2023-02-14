@@ -19,8 +19,8 @@ export const FiltersReducer = (state: State, action: Actions) => {
       case "SWITCH_SHOW_EXPIRED":
         return { ...state, showExpired: !state.showExpired, page: 1 };
       case "UPDATE_SORT":
-        
-        if (typeof sort !== "string" && sort) {  
+        console.log(action.payload)
+        if (typeof sort !== "string" && sort) {    
           currentItem = sort.find(
             (item) => item.type === action.typeSort
           ) 
@@ -31,9 +31,12 @@ export const FiltersReducer = (state: State, action: Actions) => {
             } else {
               sort = sort.filter((item) => item.type !== action.typeSort);
             }
-          } else if (action.payload.value) {
+          } else  {
             sort.push(action.payload);
           }
+        } else  {
+          sort = []
+          sort.push(action.payload);
         }
         return { ...state, sort, page: 1 };
       case "SET_PAGE":
