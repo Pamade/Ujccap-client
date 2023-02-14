@@ -4,8 +4,6 @@ import { User, Error, LoginData, Offer, OffersForSingleOfferPage } from "../type
 import { OffersWithCount } from "../types/types";
 import axiosInstance from "../utils/axiosInstance";
 
-
-
 export type Data =  OffersWithCount | Offer | User | User[]|LoginData | null | string | OffersForSingleOfferPage
 type RequestTypes = "GET" | "PUT" | "PATCH" | "DELETE" | "POST"
 
