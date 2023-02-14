@@ -45,7 +45,9 @@ const OfferNoAuth = () => {
   useEffect(() => {
     if (!userLoading) {
       handleApiCall(
-        `/offersNoAuth/fetch-offer-and-simillar/${offerId}/${userAuth?._id}`,
+        `/offersNoAuth/fetch-offer-and-simillar/${offerId}/${
+          userAuth?._id || ""
+        }`,
         {},
         {},
         (data, error, user) => {
