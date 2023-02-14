@@ -121,27 +121,26 @@ const DisplayOffers = ({
   };
 
   return (
-    <>
-      {loading && !userLoading ? (
-        <SpinnerSmall />
-      ) : (
-        <section className={styles.main}>
-          <div className={!profile ? styles.content : null}>
-            {showFilters && <Filters showExpired={expired} param={param} />}
-
-            <>
-              {values.offers &&
-                values.offers.length !== 0 &&
-                renderOffers(values.offers, values.count)}
-            </>
-          </div>
-        </section>
-      )}
+    <section className={styles.main}>
+      <div className={!profile ? styles.content : null}>
+        {showFilters && <Filters showExpired={expired} param={param} />}
+        {loading && !userLoading ? (
+          <>
+            <SpinnerSmall />
+          </>
+        ) : (
+          <>
+            {values.offers &&
+              values.offers.length !== 0 &&
+              renderOffers(values.offers, values.count)}
+          </>
+        )}
+      </div>
       {values.offers &&
         values.offers.length === 0 &&
         !loading &&
         (emptyLabel ? "" : <NotFound value="No offers" />)}
-    </>
+    </section>
   );
 };
 

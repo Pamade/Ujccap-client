@@ -6,7 +6,7 @@ $dark: #1f2029;
   display: flex;
   justify-content: center;
   background-color: $dark;
-  min-height: calc(100vh - variable.$nav-height);
+  min-height: calc(100vh - variable.$nav-height + 1px);
   width: 100%;
 }
 .content {

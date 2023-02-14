@@ -4,6 +4,7 @@ const override_wrapper = {
   display: "flex",
   margin: "0 auto",
   marginTop: "10%",
+  padding: "5% 0",
   justifyContent: "center",
   alignContent: "center",
 };

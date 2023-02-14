@@ -24,7 +24,6 @@ const DisplayOpinions = ({ user }: { user: User }) => {
         {},
         {},
         (data, err) => {
-          console.log(err);
           if (err && typeof err === "string") {
             toast.error(err);
           } else if (!loggedUser) toast.error("You have to be logged");
