@@ -87,7 +87,7 @@ const App = () => {
           element={
             <DisplayOffers
               apiCall={"/userOffers/fetch-offers-user-favourties-all"}
-              expired={true}
+              expired={false}
               showAdditional={true}
               showFilters={true}
               authorizedApiCall={true}
