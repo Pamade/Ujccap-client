@@ -9,8 +9,8 @@ interface Props {
 
 const profileOptions = [
   { label: "PROFILE", to: "/profile/informations" },
-  { label: "SELL", to: "/" },
-  { label: "FAVOURITES", to: "/" },
+  { label: "ACCOUNT", to: "/profile/account" },
+  { label: "FAVOURITES", to: "/profile/favourites" },
 ];
 
 const ProfileLinks = ({ setIsProfileNavOpen }: Props) => {
