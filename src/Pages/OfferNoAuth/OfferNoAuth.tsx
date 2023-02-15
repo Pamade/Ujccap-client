@@ -78,36 +78,34 @@ const OfferNoAuth = () => {
   }, [offerId, userLoading]);
 
   if (loading && !userLoading && !user) return <WindowLoader />;
-  if (user) {
-    return Object.keys(mainOfferInfo).length !== 0 ? (
-      <section className={styles.wrapper}>
-        <div className={styles.info_images_wrapper}>
-          <OfferInfo info={mainOfferInfo} userId={user._id} />
-          <ImagesPreview imagesOffer={mainOfferImages} />
-        </div>
-        <SellerInfoForOffer user={user} />
-        {otherUserOffers.length > 0 && (
-          <OtherOffers
-            offers={otherUserOffers}
-            userId={user._id}
-            type="userOthers"
-            showAdditional={false}
-          />
-        )}
-        {offersWithCategories.length > 0 && (
-          <OtherOffers
-            offers={offersWithCategories}
-            userId={user._id}
-            type="categories"
-            showAdditional={true}
-          />
-        )}
-      </section>
-    ) : (
-      <NotFound value="No offers" />
-    );
-  }
-  return <NotFound value="Offer not found" />;
+
+  return Object.keys(mainOfferInfo).length !== 0 && user ? (
+    <section className={styles.wrapper}>
+      <div className={styles.info_images_wrapper}>
+        <OfferInfo info={mainOfferInfo} userId={user._id} />
+        <ImagesPreview imagesOffer={mainOfferImages} />
+      </div>
+      <SellerInfoForOffer user={user} />
+      {otherUserOffers.length > 0 && (
+        <OtherOffers
+          offers={otherUserOffers}
+          userId={user._id}
+          type="userOthers"
+          showAdditional={false}
+        />
+      )}
+      {offersWithCategories.length > 0 && (
+        <OtherOffers
+          offers={offersWithCategories}
+          userId={user._id}
+          type="categories"
+          showAdditional={true}
+        />
+      )}
+    </section>
+  ) : (
+    <NotFound value="No offers" />
+  );
 };
 
 export default OfferNoAuth;
