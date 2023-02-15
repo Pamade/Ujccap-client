@@ -10,7 +10,7 @@ interface Props {
   data: Offer;
 }
 
-const PICTURES_LIMIT = 6;
+const PICTURES_LIMIT = 6 as const;
 
 const Images = ({ data, fileImageReadData, setFileImageReadData }: Props) => {
   useEffect(() => {
