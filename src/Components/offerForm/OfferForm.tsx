@@ -12,7 +12,7 @@ import { Offer } from "../../types/types";
 import { daysToDate } from "../../utils/daysToDate";
 import { useHandleApiCall } from "../../hooks/useHandleApiCall";
 import SelectField from "./Select/SelectField";
-import ErrorAlert from "../errorAlert/ErrorAlert";
+import ErrorAlert from "../ErrorAlert/ErrorAlert";
 import RemoveOffer from "./RemoveOffer/RemoveOffer";
 
 const fields = [
@@ -64,7 +64,7 @@ const OfferForm = ({ data, sendData, updating }: Props) => {
   } = useContext(AuthContext);
 
   useVerifyPermissions(user?.seller);
-  const { handleApiCall } = useHandleApiCall(sendData.method, true);
+  const { handleApiCall, loading } = useHandleApiCall(sendData.method, true);
   const [fileImageReadData, setFileImageReadData] =
     useState<DataImage[]>(arrayFileData);
   const [offerInformations, setOfferInformations] = useState<Offer>(data);
@@ -184,7 +184,16 @@ const OfferForm = ({ data, sendData, updating }: Props) => {
         {!updating && (
           <SelectField handleChangeInformations={handleChangeInformations} />
         )}
-        <button className={styles.button}>Submit</button>
+        {loading && <p className={styles.adding}>Adding offer...</p>}
+        <button
+          className={`${
+            loading
+              ? `${styles.button} ${styles.button_loading}`
+              : styles.button
+          }`}
+        >
+          Submit
+        </button>
       </form>
       {updating && (
         <RemoveOffer

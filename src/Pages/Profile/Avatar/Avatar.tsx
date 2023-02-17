@@ -3,7 +3,7 @@ import styles from "./avatar.module.scss";
 import { useFileRead } from "../../../hooks/useFileRead";
 import { useHandleApiCall } from "../../../hooks/useHandleApiCall";
 import { toast } from "react-toastify";
-import ErrorAlert from "../../../Components/errorAlert/ErrorAlert";
+import ErrorAlert from "../../../Components/ErrorAlert/ErrorAlert";
 import { User } from "../../../types/types";
 
 interface Props {

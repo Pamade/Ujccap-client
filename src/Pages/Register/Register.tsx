@@ -6,8 +6,8 @@ import status from "../../styles/loginRegisterStatus.module.scss";
 import { AuthContext } from "../../context/AuthContext/AuthContext";
 import avatar from "../../images/default.png";
 import { useFileRead } from "../../hooks/useFileRead";
-import GoogleLoginButton from "../../Components/googleLoginButton/GoogleLoginButton";
-import ValidationError from "../../Components/validationError/ValidationError";
+import GoogleLoginButton from "../../Components/GoogleLoginButton/GoogleLoginButton";
+import ValidationError from "../../Components/ValidationError/ValidationError";
 import { useHandleApiCall } from "../../hooks/useHandleApiCall";
 import { useResendVerificationToken } from "../../hooks/useResendVerificationToken";
 const Register = () => {

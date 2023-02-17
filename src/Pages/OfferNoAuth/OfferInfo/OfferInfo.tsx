@@ -3,7 +3,7 @@ import { AiOutlineFieldTime } from "react-icons/ai";
 import BoxInfo from "./BoxInfo";
 import { OfferInfoPick } from "../OfferNoAuth";
 import moment from "moment";
-import DisplayCategories from "../../../Components/displayCategories/DisplayCategories";
+import DisplayCategories from "../../../Components/DisplayCategories/DisplayCategories";
 import HeartIcon from "../../../Components/HeartIcon/HeartIcon";
 
 interface Props {

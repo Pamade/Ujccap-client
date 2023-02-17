@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import styles from "../../styles/authForm.module.scss";
 import status from "../../styles/loginRegisterStatus.module.scss";
-import ValidationError from "../../Components/validationError/ValidationError";
+import ValidationError from "../../Components/ValidationError/ValidationError";
 import { AuthContext } from "../../context/AuthContext/AuthContext";
 import { useHandleApiCall } from "../../hooks/useHandleApiCall";
 const ForgotPassword = () => {

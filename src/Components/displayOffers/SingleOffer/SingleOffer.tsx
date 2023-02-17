@@ -4,7 +4,7 @@ import { AiFillEuroCircle } from "react-icons/ai";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import UserAdditional from "./UserAdditional/UserAdditional";
-import DisplayCategories from "../../displayCategories/DisplayCategories";
+import DisplayCategories from "../../DisplayCategories/DisplayCategories";
 import { Offer } from "../../../types/types";
 import { RedirectSingleOffer } from "../DisplayOffers";
 interface Props {

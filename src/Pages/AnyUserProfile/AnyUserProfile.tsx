@@ -1,13 +1,13 @@
 import DisplayOffers from "../../Components/displayOffers/DisplayOffers";
 import styles from "../../styles/profile.module.scss";
 import Avatar from "../Profile/Avatar/Avatar";
-import WindowLoader from "../../Components/windowLoader/WindowLoader";
+import WindowLoader from "../../Components/WindowLoader/WindowLoader";
 import ListItem from "./ListItem/ListItem";
 import ButtonRedirectToAll from "../Profile/ButtonRedirectToAll/ButtonRedirectToAll";
 import { useFetchAnyUser } from "../../hooks/useFetchAnyUser";
 import NotFound from "../../Components/NotFound/NotFound";
 
-import DisplayOpinions from "../../Components/opinions/DisplayOpinions";
+import DisplayOpinions from "../../Components/Opinions/DisplayOpinions";
 const AnyUserProfile = () => {
   const { user, loading } = useFetchAnyUser();
 

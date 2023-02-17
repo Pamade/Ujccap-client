@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import background from "../../images/background.jpg";
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext/AuthContext";
-import Modal from "../../Components/modal/Modal";
+import Modal from "../../Components/Modal/Modal";
 import { PageLoading } from "../../context/PageLoadingContext";
 import DisplayOffers from "../../Components/displayOffers/DisplayOffers";
 import ShowCategories from "./ShowCategories/ShowCategories";
