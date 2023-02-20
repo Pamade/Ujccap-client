@@ -4,7 +4,7 @@ import stylesWrapper from "../account-details.module.scss";
 import { Seller } from "../../../types/types";
 import { useHandleApiCall } from "../../../hooks/useHandleApiCall";
 import { toast } from "react-toastify";
-import ErrorAlert from "../../../Components/ErrorAlert/ErrorAlert";
+import ErrorAlert from "../../../Components/errorAlert/ErrorAlert";
 import ProfileInputField from "../ProfileInputField/ProfileInputField";
 import ProfileSubmitButton from "../ProfileSubmitButton/ProfileSubmitButton";
 

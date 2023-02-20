@@ -12,7 +12,7 @@ import { Offer } from "../../types/types";
 import { daysToDate } from "../../utils/daysToDate";
 import { useHandleApiCall } from "../../hooks/useHandleApiCall";
 import SelectField from "./Select/SelectField";
-import ErrorAlert from "../ErrorAlert/ErrorAlert";
+import ErrorAlert from "../errorAlert/ErrorAlert";
 import RemoveOffer from "./RemoveOffer/RemoveOffer";
 
 const fields = [
