@@ -2,8 +2,8 @@ import React, { useContext, useState } from "react";
 import styles from "../../styles/authForm.module.scss";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext/AuthContext";
-import GoogleLoginButton from "../../Components/GoogleLoginButton/GoogleLoginButton";
-import ValidationError from "../../Components/ValidationError/ValidationError";
+import GoogleLoginButton from "../../Components/googleLoginButton/GoogleLoginButton";
+import ValidationError from "../../Components/validationError/ValidationError";
 import { useHandleApiCall, CheckType } from "../../hooks/useHandleApiCall";
 import { LoginData } from "../../types/types";
 const Login = () => {

@@ -2,7 +2,7 @@ import React from "react";
 import DisplayOffers from "../../Components/displayOffers/DisplayOffers";
 import SellerInfoForOffer from "../../Components/SellerInfoForOffer/SellerInfoForOffer";
 import { useFetchAnyUser } from "../../hooks/useFetchAnyUser";
-import WindowLoader from "../../Components/WindowLoader/WindowLoader";
+import WindowLoader from "../../Components/windowLoader/WindowLoader";
 import NotFound from "../../Components/NotFound/NotFound";
 const OffersAnyUser = () => {
   const { user, loading } = useFetchAnyUser();

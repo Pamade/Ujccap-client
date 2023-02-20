@@ -12,7 +12,7 @@ import { Offer } from "../../types/types";
 import SingleOffer from "./SingleOffer/SingleOffer";
 import PaginateButtons from "../PaginateButtons/PaginateButtons";
 import Filters from "../Filters/Filters";
-import SpinnerSmall from "../SpinnerSmall/SpinnerSmall";
+import SpinnerSmall from "../spinnerSmall/SpinnerSmall";
 import styles from "./display-offers.module.scss";
 import { useParams } from "react-router-dom";
 import NotFound from "../NotFound/NotFound";

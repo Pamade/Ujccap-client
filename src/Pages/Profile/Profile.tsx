@@ -7,7 +7,7 @@ import { useResendVerificationToken } from "../../hooks/useResendVerificationTok
 import List from "./List/List";
 import Avatar from "./Avatar/Avatar";
 import DisplayOffers from "../../Components/displayOffers/DisplayOffers";
-import DisplayOpinions from "../../Components/Opinions/DisplayOpinions";
+import DisplayOpinions from "../../Components/opinions/DisplayOpinions";
 const Profile = () => {
   const { sendToken, loading } = useResendVerificationToken();
   const {

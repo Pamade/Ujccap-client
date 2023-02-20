@@ -2,8 +2,8 @@ import React, { useState, useContext, useEffect } from "react";
 import styles from "../../styles/authForm.module.scss";
 import { Navigate, useParams } from "react-router-dom";
 import { AuthContext } from "../../context/AuthContext/AuthContext";
-import VerifyBox from "../../Components/VerifyBox/VerifyBox";
-import ValidationError from "../../Components/ValidationError/ValidationError";
+import VerifyBox from "../../Components/verifyBox/VerifyBox";
+import ValidationError from "../../Components/validationError/ValidationError";
 import { useHandleApiCall } from "../../hooks/useHandleApiCall";
 
 const ForgotPasswordChange = () => {

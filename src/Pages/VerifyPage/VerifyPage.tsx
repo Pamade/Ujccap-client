@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../context/AuthContext/AuthContext";
-import VerifyBox from "../../Components/VerifyBox/VerifyBox";
+import VerifyBox from "../../Components/verifyBox/VerifyBox";
 import { useHandleApiCall } from "../../hooks/useHandleApiCall";
 
 const VerifyPage = () => {

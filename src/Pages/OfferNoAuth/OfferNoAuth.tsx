@@ -10,7 +10,7 @@ import { useParams } from "react-router-dom";
 import OfferInfo from "./OfferInfo/OfferInfo";
 import ImagesPreview from "./ImagesPreview/ImagesPreview";
 import _ from "lodash";
-import WindowLoader from "../../Components/WindowLoader/WindowLoader";
+import WindowLoader from "../../Components/windowLoader/WindowLoader";
 import OtherOffers from "./OtherOffers/OtherOffers";
 import { AuthContext } from "../../context/AuthContext/AuthContext";
 import SellerInfoForOffer from "../../Components/SellerInfoForOffer/SellerInfoForOffer";

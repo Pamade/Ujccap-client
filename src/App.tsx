@@ -8,7 +8,7 @@ import Home from "./Pages/Home/Home";
 import VerifyPage from "./Pages/VerifyPage/VerifyPage";
 import { useContext } from "react";
 import { AuthContext } from "./context/AuthContext/AuthContext";
-import WindowLoader from "./Components/WindowLoader/WindowLoader";
+import WindowLoader from "./Components/windowLoader/WindowLoader";
 import ForgotPassword from "./Pages/ForgotPasswordVerify/ForgotPassword";
 import ForgotPasswordChange from "./Pages/ForgotPasswordChange/ForgotPasswordChange";
 import Logout from "./Pages/Logout/Logout";
